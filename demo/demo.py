@@ -126,9 +126,7 @@ def main():
 
     labels = open(args.label).readlines()
     labels = [x.strip() for x in labels]
-    labels = {0:'Normal', 1:'VFP'}
-    # import pdb; pdb.set_trace()
-    results = [(labels[k[0]], k[1]) for k in top5_label[:2]]
+    results = [(labels[k[0]], k[1]) for k in top5_label]
 
     print('The top-5 labels with corresponding scores are:')
     for result in results:
